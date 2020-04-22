@@ -5,14 +5,19 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light text-light absolute-top">
       <div class="container">
+
+        <button class="navbar-toggler order-2 order-md-1 bg-light" style="border-radius:5px ;" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-left navbar-right" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+
         <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item " > 
-                    <a class="nav-link" style="color: white !important ;" href="/">Home</a>
+                <li class="nav-item  " > 
+                    <a class="nav-link " id="dropdown01"  aria-haspopup="true" aria-expanded="false" style="color: white !important ;" href="/">Home</a>
                 </li> 
                 <% if(currentUser) { %> 
-                    <li class="nav-item ml-5">
-                        <a class="nav-link" style="color: white !important ;" href="/movie/new">Add your ArtWork</a>
+                    <li class="nav-item dropdown ml-5">
+                        <a class="nav-link" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white !important ;" href="/movie/new">Add your ArtWork</a>
                     </li>
                 <% } %>
             </ul>
@@ -42,7 +47,7 @@
       </div>
     </nav>
   </header>
-  
+  <script src="/scripts/app.js"></script>
 <div class="container">
     <% if(error && error.length > 0){ %> 
         <div class="alert alert-danger">
