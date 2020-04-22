@@ -65,9 +65,10 @@ a{
 }
 .register-info-box{
     width:30%;
-    padding:0 50px;
+    padding:0 20px;
     top:20%;
     right:0;
+    margin-right: 45px;
     position:absolute;
     text-align:left;
     
@@ -152,5 +153,14 @@ a{
   background-color: #444444;;
 }
     
-    
+@media screen and (max-width: 1024px) {
+    .login-reg-panel .register-info-box {
+      margin: 0 auto; } }
+@media screen and (max-width: 768px) {
+    .login-reg-panel {
+      width: calc( 100% - 30px);
+      max-width: 100%; } }
+@media screen and (max-width: 480px) {
+    .white-panel {
+      padding: 50px 30px 70px 30px; } }
     
