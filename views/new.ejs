@@ -1,0 +1,29 @@
+<%- include('partials/navbar') %> 
+<div class="container">
+    <div class="row">
+        <div style="width:30%;margin:0 auto;" class="mt-5">
+            <h1 style="text-align: center;">Add your anime art</h1>
+            <form action="/movie" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="image">Art name</label>
+                    <input class="form-control" type="text" style="border-radius: 10px;" name="movie[name]" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <label for="image">Anime name</label>
+                    <input class="form-control" type="text" style="border-radius: 10px;" name="movie[animename]" placeholder="Anime name">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input class="form-control-file" id="image" style="border-radius: 10px;" type="file" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="4" style="border-radius: 10px;" cols="40" name="movie[description]" placeholder="Write Description*"></textarea>
+                </div>
+                <div class="">
+                    <button class=" btn btn-primary btn-lg" style="border-radius: 10px;" type="submit">SUBMIT</button>
+                </div>
+            </form>
+            <a href="/movie">GO BACK</a>
+        </div>
+    </div>
+</div>

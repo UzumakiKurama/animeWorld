@@ -1,0 +1,52 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<div class="container">
+    <% if(error && error.length > 0){ %> 
+        <div class="alert alert-danger">
+            <%= error %> 
+        </div>
+    <% } %>
+    <% if(success && success.length > 0){ %> 
+        <div class="alert alert-success">
+            <%= success %> 
+        </div>
+    <% } %>
+</div>
+
+<div class="login-reg-panel">
+    <div class="login-info-box">
+        <h2>Have an account?</h2>
+        <label id="label-register" for="log-reg-show">Login</label>
+        <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+    </div>
+                        
+    <div class="register-info-box">
+        <h2>Don't have an account?</h2>
+        <a href="/register">REGISTER</a>
+    </div>
+    <div class="white-panel">
+        <div class="login-show">
+            <form action="/login" method="POST" class="log-in">
+                <h2>AnimeWorld</h2>
+                <p>Welcome Log in to your account :</p>
+                <input type="text" name="username" placeholder="username">
+                <input type="password"  name="password" placeholder="password">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="register-show">
+            <h2>REGISTER</h2>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="button" value="Register">
+        </div>
+    </div>
+    </div>
+</div>
+<script src="/scripts/jquery.js"></script>
+

@@ -1,0 +1,25 @@
+<%- include("partials/navbar") %>
+<style type="text/css">
+</style>
+<main class=" pt-4 main">
+  <div class="container">
+    <div class="row">
+      <div class="card-columns">
+        <% movie.forEach(element => { %>
+            <article class="card mb-4">
+                <header class="card-header">
+                  <div class="card-meta">
+                    <em><%= moment(element.createdAt).fromNow() %></em>
+                  </div>
+                  <h4 class="card-title"><%= element.name %></h4>
+                </header>
+                <a href="/movie/<%=element._id %>">
+                  <img class="card-img" src="<%= element.image %>" alt="" />
+                </a>
+             </article>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="/scripts/app.js"></script>
