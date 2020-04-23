@@ -1,6 +1,10 @@
 {
   "name": "animeworld",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.6.3",
+    "npm": "6.13.7"
+  },
   "description": "AnimeWorld- a platform for all the anime fans to show thier talent",
   "main": "app.js",
   "scripts": {
