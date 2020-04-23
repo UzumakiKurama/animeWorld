@@ -63,7 +63,7 @@ app.use(function(req,res,next){
 });
 app.set("view engine","ejs");
 
-mongoose.connect("mongodb://localhost/movieWorld" ,{useNewUrlParser:true , useUnifiedTopology:true , useFindAndModify:false});
+mongoose.connect("mongodb+srv://abhijeet:abhirock@cluster0-blgmm.mongodb.net/test?retryWrites=true&w=majority" ,{useNewUrlParser:true , useUnifiedTopology:true , useFindAndModify:false});
 
 app.get("/",function(req,res){
     res.render("landing");
