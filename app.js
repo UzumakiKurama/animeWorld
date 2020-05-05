@@ -16,6 +16,7 @@ var multer                = require("multer");
 var cloudinary            = require('cloudinary');
 var moment                = require("moment");
 
+
 //image upload logic
 var storage = multer.diskStorage({
     filename: function(req, file, callback) {
@@ -237,5 +238,5 @@ function userAuthentication(req,res,next){
 }
 
 app.listen(3000,function(){
-    console.log("Yelcamp started ....");
+    console.log("server has started ....");
 });
