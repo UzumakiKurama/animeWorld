@@ -15,7 +15,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var multer                = require("multer");
 var cloudinary            = require('cloudinary');
 var moment                = require("moment");
-
+const MongoClient         = require('mongodb').MongoClient;
 
 //image upload logic
 var storage = multer.diskStorage({
@@ -65,6 +65,13 @@ app.use(function(req,res,next){
 app.set("view engine","ejs");
 // mongoose.connect("mongodb://localhost/movieWorld" ,{useNewUrlParser:true , useUnifiedTopology:true , useFindAndModify:false});
 mongoose.connect("mongodb+srv://abhijeet:abhirock@cluster0-blgmm.mongodb.net/test?retryWrites=true&w=majority" ,{useNewUrlParser:true , useUnifiedTopology:true , useFindAndModify:false});
+// const uri = "mongodb+srv://abhijeet:abhirock@cluster0-blgmm.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, {useUnifiedTopology:true, useNewUrlParser: true });
+// client.connect(err => {
+//     const collection = client.db("test").collection("movies");
+//     // perform actions on the collection object
+//     client.close();
+//   });
 
 app.get("/",function(req,res){
     res.render("landing");
