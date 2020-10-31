@@ -2,6 +2,8 @@
 A dynamic web-platform where users (mostly anime fans) can view, add, edit and delete their posts or arts i.e. implementing all CRUD operations.
 Built using NodeJS, ExpressJS, MongoDB and VanillaJS.
 
+Webapp link :- https://worldofanimefans.herokuapp.com/
+
 HOME PAGE (It is a slideshow of images)
 ![alt text](public/images/1.JPG)
 ![alt text](public/images/2.JPG)
