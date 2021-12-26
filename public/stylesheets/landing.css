@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 body {
   background: url("10817.jpg");
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   transition: background 1.5s linear;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .bg {
@@ -11,6 +14,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+}
+
+.bg-images {
+  display: none;
 }
 
 body,
@@ -21,25 +29,63 @@ html {
   color: white;
 }
 
-h1 {
-font-weight: 700;
-font-size: 5em;
+.content {
+  padding-top: 20%;
+  text-align: center;
+  z-index: 10;
 }
 
-
-.content{
-padding-top: 20%;
-text-align: center;
-}
-
-.content h1, .content h3{
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-               0px 8px 13px rgba(0,0,0,0.1),
-               0px 18px 23px rgba(0,0,0,0.1);
+.content h1,
+.content h3 {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 hr {
   width: 400px;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-top: 3px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-family: "Anton", sans-serif;
+}
+
+.heading-secondary {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.btn-main {
+  background-color: #fff;
+  display: inline-block;
+  height: 50px;
+  width: 240px;
+  font-weight: 500;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #000;
+  box-shadow: 0 2rem 4rem #000;
+  transition: all 0.2s;
+}
+a {
+  text-align: center;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+a:active {
+  transform: translateY(5px);
+}
+
+.hr-line {
+  font-weight: 400;
 }
